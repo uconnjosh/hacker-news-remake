@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: hn_clone_development
+
+test:
+  adapter: postgresql
+  database: hn_clone_test

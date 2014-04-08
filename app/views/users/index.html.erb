@@ -1,0 +1,12 @@
+<h1>User List</h1>
+
+<ul>
+<% User.all.each do |user| %>
+  <li><%= user.name %></li>
+  <% end %>
+</ul>
+
+<br />
+<br />
+
+<%= link_to "New User", new_user_path, :class => "btn btn-primary" %>
