@@ -8,8 +8,28 @@
 </head>
 <body>
 
+
 <div class="container">
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
 <%= yield %>
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+ <br />
+    <%= link_to "New User", new_user_path %>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <%= link_to "New Article", new_article_path %>
+
+
+  </div>
+</div>
+</nav>
+
 </div>
 
 </body>

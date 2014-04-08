@@ -1,12 +1,24 @@
 <h1>User List</h1>
 
 <ul>
-<% User.all.each do |user| %>
-  <li><%= user.name %></li>
+<% @users.each do |user| %>
+<br />
+  <li><%= user.name %>&nbsp;
+
+<div class="btn-group btn-group-xs">
+<%= link_to "Delete User", user_path(user),
+                                            :confirm => "You Sure?",
+                                            :method => "delete",
+                                            :class => "btn btn-danger" %>
+
+</div>
+</li>
+
+
+
   <% end %>
 </ul>
 
 <br />
-<br />
 
-<%= link_to "New User", new_user_path, :class => "btn btn-primary" %>
+

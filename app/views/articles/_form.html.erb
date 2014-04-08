@@ -1,0 +1,16 @@
+<%= render("layouts/errors", :object => @article) %>
+
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+
+    <%= f.label :user_id %>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+  </div>
+
+  <%= f.submit(:class => "btn btn-primary") %>
+  <% end %>

@@ -1,0 +1,17 @@
+<h1>Articles</h1>
+<ul>
+<% @articles.each do |article| %>
+  <li>
+
+    <a href=<%= article.link %>><%= article.name %></a>
+    <div class="btn-group btn-group-xs">
+      <%= link_to "Kill Story", article_path(article),
+                                            :confirm => "You Sure?",
+                                            :method => "delete",
+                                            :class => "btn btn-danger" %>
+
+    </div>
+
+  </li>
+<% end %>
+</ul>
